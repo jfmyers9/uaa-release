@@ -23,7 +23,7 @@ jobs:
 - name: uaa_postgres
   version: 56381f1620ce9aad14c0a5deeac488c76c1d8c02
   fingerprint: 56381f1620ce9aad14c0a5deeac488c76c1d8c02
-  sha1: cf77c1f13cde1c51c63fcb7bc41d62aad3edbe89
+  sha1: dd0f62df62151f9b8bd4ab62453ecf0a82af36b3
 license:
   version: 501511a68ddc6bab2ad0faddc955997b32cfaf6f
   fingerprint: 501511a68ddc6bab2ad0faddc955997b32cfaf6f
