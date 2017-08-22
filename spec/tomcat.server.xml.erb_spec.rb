@@ -33,7 +33,7 @@ describe 'tomcat.server.xml' do
         expect(internal_proxies).to eq 'link\.ed-add\.ress|127\.1\.0\.1|127\.1\.0\.2|127\.1\.0\.3|proxy_ips_regex'
       end
     end
-    
+
     context 'when uaa.proxy_ips_regex is in the manifest' do
       let(:manifest) { generate_cf_manifest('spec/input/all-properties-set.yml') }
 

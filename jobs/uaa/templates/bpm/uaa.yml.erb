@@ -1,0 +1,12 @@
+---
+executable: /var/vcap/jobs/uaa/bin/uaa
+env:
+  - CATALINA_HOME=/var/vcap/data/uaa/tomcat
+  - CATALINA_OPTS=<%= p('uaa.catalina_opts') %>
+  - CLOUD_FOUNDRY_CONFIG_PATH=/var/vcap/jobs/uaa/config
+  - KEYSTORE=/var/vcap/jobs/uaa/config/cacerts
+  - KEYSTORE_OPTS=-Djavax.net.ssl.trustStore=/var/vcap/jobs/uaa/config/cacerts -Djavax.net.ssl.trustStoreType=JKS
+  - STATUS=/var/vcap/data/uaa/uaa_status
+hooks:
+  pre_start: /var/vcap/jobs/uaa/bin/uaa_setup
+

@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+DATA_DIR=/var/vcap/data/uaa
+mkdir -p $DATA_DIR
+rm -rf $DATA_DIR/tomcat
+cp -a /var/vcap/packages/uaa/tomcat $DATA_DIR
+cp -a /var/vcap/jobs/uaa/config/tomcat/* $DATA_DIR/tomcat/conf/
+chown -R vcap:vcap $DATA_DIR

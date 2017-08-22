@@ -4,6 +4,9 @@ name: uaa
 description: "The UAA is the identity management service for Cloud Foundry. It's primary role is as an OAuth2 provider, issuing tokens for client applications to use when they act on behalf of Cloud Foundry users. It can also authenticate users with their Cloud Foundry credentials, and can act as an SSO service using those credentials (or others). It has endpoints for managing user accounts and for registering OAuth2 clients, as well as various other management functions."
 
 templates:
+  bpm/uaa.yml.erb: config/bpm/uaa.yml
+  bin/uaa.erb: bin/uaa
+  bin/uaa_setup.erb: bin/uaa_setup
   uaa_ctl.erb: bin/uaa_ctl
   install_crt: bin/install_crt
   dns_health_check.erb: bin/dns_health_check
@@ -39,6 +42,9 @@ packages:
   - uaa
 
 properties:
+  bpm.enabled:
+    description: "Experimental: Enable BOSH Process Manager"
+    default: false
   # General server properties
   uaa.catalina_opts:
     description: "The options used to configure Tomcat"
